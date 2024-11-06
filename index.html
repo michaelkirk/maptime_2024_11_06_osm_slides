@@ -3,10 +3,25 @@
 <head>
     <meta charset='utf-8'>
     <style>
+
+/**
+* Typography
+*/
         body {
             font-family: Arial, sans-serif;
-            overflow: hidden;
+            font-size: 300%;
+            background: white;
+            margin: 64px
         }
+
+        h1 {
+            margin-bottom: 80px;
+        }
+
+        /**
+         * Slides UI
+         */
+
 
         .slide {
             display: none;
@@ -18,39 +33,53 @@
             display: block;
         }
 
-        button {
-            padding: 10px 20px;
+        .nav button {
+            padding: 5px 10px;
             margin: 10px;
         }
 
         .nav {
-            position: absolute;
+            position: fixed;
             bottom: 10px;
-            width: 100%;
+            right: 10px;
             display: flex;
             justify-content: center;
         }
+
     </style>
 </head>
 <body>
 <div id='slideshow'>
     
-<div class='slide slide-0'><h1>first slide header</h1>
+<div class='slide slide-0'><h1>Using OpenStreetMap Data</h1>
 <div class='slide-content'>
-<p>first slide content</p>
+<p>Now that we've all spent a bunch of time putting data into OSM,
+let's get it back out again.</p>
 
 </div><!-- end slide-content -->
 </div><!-- end slide-0 -->
-<div class='slide slide-0'><h1>second slide header</h1>
+<div class='slide slide-0'><h1>overpass t-t-t-t-t-tuuurbbboooo</h1>
 <div class='slide-content'>
+<p>overpass-turbo
+https://wiki.openstreetmap.org/wiki/Overpass_API</p>
+<blockquote>
+<p>It can take a couple of minutes for <a href="https://wiki.openstreetmap.org/wiki/Changeset" title="Changeset">changes</a> to the <a href="https://wiki.openstreetmap.org/wiki/Database" title="Database">database</a> to show up in the Overpass API query results.</p>
+</blockquote>
+<p>Quick and "easy" for small-ish "one-time" exports.</p>
+<p>What if I need a bigger export? Or I want to perform a bunch of different queries quickly?</p>
+<h3>osmium cli tool</h3>
+<p>Rather than querying a remote API, download "all the data" and do queries locally with osmosis</p>
+<p>Map template... web map?
+QGIS project?</p>
+<p>Assets to have available: Seattle.osm.pbf?</p>
 <p>second slide content</p>
 
 </div><!-- end slide-content -->
 </div><!-- end slide-0 -->
 </div>
 <div class='nav'>
-    <button id='prev'>Previous</button>
-    <button id='next'>Next</button>
+    <button id='prev' title="Previous Slide">&lt;&mdash;</button>
+    <button id='next' title="Next Slide">&mdash;&gt;</button>
 </div>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -80,6 +109,13 @@
             if (event.key === "ArrowRight" || event.key === " ") showSlide(currentSlide + 1);
             if (event.key === "ArrowLeft") showSlide(currentSlide - 1);
         });
+
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get("devReload") === "1") {
+            setInterval(() => {
+                window.location.reload();
+            }, 1000);
+        }
     });
 </script>
 </body>

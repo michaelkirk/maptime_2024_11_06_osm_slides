@@ -3,10 +3,25 @@
 <head>
     <meta charset='utf-8'>
     <style>
+
+/**
+* Typography
+*/
         body {
             font-family: Arial, sans-serif;
-            overflow: hidden;
+            font-size: 300%;
+            background: white;
+            margin: 64px
         }
+
+        h1 {
+            margin-bottom: 80px;
+        }
+
+        /**
+         * Slides UI
+         */
+
 
         .slide {
             display: none;
@@ -18,18 +33,19 @@
             display: block;
         }
 
-        button {
-            padding: 10px 20px;
+        .nav button {
+            padding: 5px 10px;
             margin: 10px;
         }
 
         .nav {
-            position: absolute;
+            position: fixed;
             bottom: 10px;
-            width: 100%;
+            right: 10px;
             display: flex;
             justify-content: center;
         }
+
     </style>
 </head>
 <body>
@@ -37,8 +53,8 @@
     {{ slides | safe }}
 </div>
 <div class='nav'>
-    <button id='prev'>Previous</button>
-    <button id='next'>Next</button>
+    <button id='prev' title="Previous Slide">&lt;&mdash;</button>
+    <button id='next' title="Next Slide">&mdash;&gt;</button>
 </div>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -68,6 +84,13 @@
             if (event.key === "ArrowRight" || event.key === " ") showSlide(currentSlide + 1);
             if (event.key === "ArrowLeft") showSlide(currentSlide - 1);
         });
+
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get("devReload") === "1") {
+            setInterval(() => {
+                window.location.reload();
+            }, 1000);
+        }
     });
 </script>
 </body>
