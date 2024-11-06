@@ -65,7 +65,7 @@
         document.getElementById("next").onclick = () => showSlide(currentSlide + 1);
 
         document.addEventListener("keydown", function(event) {
-            if (event.key === "ArrowRight") showSlide(currentSlide + 1);
+            if (event.key === "ArrowRight" || event.key === " ") showSlide(currentSlide + 1);
             if (event.key === "ArrowLeft") showSlide(currentSlide - 1);
         });
     });
