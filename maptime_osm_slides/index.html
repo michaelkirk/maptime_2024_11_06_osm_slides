@@ -15,8 +15,11 @@ body {
 }
 
 h1 {
-margin-top: 0px;
     margin-bottom: 80px;
+}
+
+h2 {
+  margin-block-end: 0.2em;
 }
 
 blockquote {
@@ -25,6 +28,20 @@ blockquote {
     border-left: 4px solid #ccc;
     margin: 1.5em 10px;
     padding: 0.5em 10px 0.5em 1em;
+}
+
+/**
+* Slide layout components
+*/
+
+.column {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.column h2 {
+    margin-top: 0;
 }
 
 /*
@@ -47,11 +64,18 @@ blockquote p {
 
 .slide {
     display: none;
+
+    width: 100%;
     padding: 20px;
+    flex-direction: column;
 }
 
 .slide.active {
-    display: block;
+    display: flex;
+}
+
+.slide-content {
+  display: flex;
 }
 
 .nav button {
@@ -78,14 +102,88 @@ blockquote p {
 <body>
 <div id='slideshow'>
     
-<div class='slide slide-0'><h1>Using OpenStreetMap Data</h1>
+<div class='slide slide-0'><h1><br /><br />Using OpenStreetMap Data</h1>
 <div class='slide-content'>
-<p>Now that we've all spent a bunch of time putting data into OSM,
-let's get it back out again.</p>
+<p>Now that we've all spent some time putting data <strong>into</strong> OSM,
+let's get some data <strong>out</strong> of OSM.</p>
 
 </div><!-- end slide-content -->
 </div><!-- end slide-0 -->
-<div class='slide slide-0'><h1>overpass t-t-turbo!!! 🔥🔥🔥</h1>
+<div class='slide slide-0'><h1>But first...</h1>
+<div class='slide-content'>
+<h2>a pedantic diversion.</h2>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>What is OpenStreetMap?</h1>
+<div class='slide-content'>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>What is OpenStreetMap?</h1>
+<div class='slide-content'>
+<ul>
+<li>It's a website: <a href="https://openstreetmap.org">openstreetmap.org</a>.</li>
+</ul>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>What is OpenStreetMap?</h1>
+<div class='slide-content'>
+<ul>
+<li>It's a website: <a href="https://openstreetmap.org">openstreetmap.org</a>.</li>
+<li>It's an accumulation of facts (a database).</li>
+</ul>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>Facts, you say?</h1>
+<div class='slide-content'>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>Facts, you say?</h1>
+<div class='slide-content'>
+<p>Two kinds of facts in OSM.</p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>Facts, you say?</h1>
+<div class='slide-content'>
+<div class="column">
+<h2>Geometry</h2>
+<p>Where the thing is.</p>
+</div>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>Facts, you say?</h1>
+<div class='slide-content'>
+<div class="column">
+<h2>Geometry</h2>
+<p>Where the thing is.</p>
+</div>
+<div class="column">
+<h2>Tags</h2>
+<p>What the thing is.</p>
+</div>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>Geometry: Where the thing is</h1>
+<div class='slide-content'>
+<p>Pretty self-explanatory conceptually, though the details can be tricky.</p>
+<p>All geometry in OSM is stored as latitude and longitude (e.g. no projected points).</p>
+<p>When doing a query you'll often want to know the "bounds" of your area of interest.</p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>Tags: What the thing is.</h1>
+<div class='slide-content'>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>Overpass t-t-t-turbo 🔥🔥🔥</h1>
 <div class='slide-content'>
 <p>Overpass Turbo is a website for extracting data from OSM.</p>
 <p><a href="https://overpass-turbo.eu">https://overpass-turbo.eu</a></p>
@@ -120,15 +218,15 @@ let's get it back out again.</p>
 
 </div><!-- end slide-content -->
 </div><!-- end slide-0 -->
-<div class='slide slide-0'><h1>So, should you use OSM data?</h1>
+<div class='slide slide-0'><h1>So, <em>should</em> you use OSM data?</h1>
 <div class='slide-content'>
 
 </div><!-- end slide-content -->
 </div><!-- end slide-0 -->
-<div class='slide slide-0'><h1>So, should you use OSM data?</h1>
+<div class='slide slide-0'><h1>So, <em>should</em> you use OSM data?</h1>
 <div class='slide-content'>
 <ul>
-<li>Completeness:</li>
+<li>Completeness?</li>
 </ul>
 
 </div><!-- end slide-content -->
@@ -158,8 +256,8 @@ let's get it back out again.</p>
 <li>major geographic features</li>
 <li>political borders</li>
 <li>most roads</li>
-<li>buildings dense areas</li>
-<li>long lived businesses, churches, libraries, hospitals</li>
+<li>buildings in larger cities</li>
+<li>long-lived businesses, churches, libraries, hospitals</li>
 <li>places where map nerds with extra time live</li>
 </ul>
 
@@ -170,22 +268,26 @@ let's get it back out again.</p>
 <p>Conversely, OSM is less good at things that change often.</p>
 <ul>
 <li>recently opened businesses</li>
+<li>tags not visible on osm.org (non-geometry data) tend to be worse
+<ul>
 <li>website URLs</li>
 <li>business opening hours</li>
 <li>minor roads, less populated areas</li>
 </ul>
-
-</div><!-- end slide-content -->
-</div><!-- end slide-0 -->
-<div class='slide slide-0'><h1>So, should you use OSM data?</h1>
-<div class='slide-content'>
-<ul>
-<li>Completeness:</li>
+</li>
 </ul>
 
 </div><!-- end slide-content -->
 </div><!-- end slide-0 -->
-<div class='slide slide-0'><h1>So, should you use OSM data?</h1>
+<div class='slide slide-0'><h1>So, <em>should</em> you use OSM data?</h1>
+<div class='slide-content'>
+<ul>
+<li>Completeness?</li>
+</ul>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>So, <em>should</em> you use OSM data?</h1>
 <div class='slide-content'>
 <ul>
 <li>Completeness: Best for things that don't change a lot.</li>
@@ -193,7 +295,7 @@ let's get it back out again.</p>
 
 </div><!-- end slide-content -->
 </div><!-- end slide-0 -->
-<div class='slide slide-0'><h1>So, should you use OSM data?</h1>
+<div class='slide slide-0'><h1>So, <em>should</em> you use OSM data?</h1>
 <div class='slide-content'>
 <ul>
 <li>Completeness: Best for things that don't change a lot.</li>
@@ -259,6 +361,7 @@ But it's usually cleaned up quickly.</p>
 </div><!-- end slide-0 -->
 </div>
 <div class='nav'>
+    <button id='fullscreen' title="Toggle Full Screen">⛶</button>
     <button id='prev' title="Previous Slide">&lt;&mdash;</button>
     <span id='slide-number'>1 of 1</span>
     <button id='next' title="Next Slide">&mdash;&gt;</button>
@@ -292,6 +395,14 @@ But it's usually cleaned up quickly.</p>
             document.getElementById("slide-number").textContent = `${currentSlide + 1} of ${slides.length}`;
         }
 
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+        }
+
         currentSlide = getSlideFromHash();
         showSlide(currentSlide);
 
@@ -301,6 +412,7 @@ But it's usually cleaned up quickly.</p>
         document.getElementById("next").onclick = () => {
             if (currentSlide < slides.length - 1) showSlide(currentSlide + 1);
         };
+        document.getElementById("fullscreen").onclick = toggleFullScreen;
 
         document.addEventListener("keydown", function(event) {
             if (event.key === "ArrowRight" || event.key === " ") {

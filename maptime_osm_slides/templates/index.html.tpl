@@ -15,8 +15,11 @@ body {
 }
 
 h1 {
-margin-top: 0px;
     margin-bottom: 80px;
+}
+
+h2 {
+  margin-block-end: 0.2em;
 }
 
 blockquote {
@@ -25,6 +28,20 @@ blockquote {
     border-left: 4px solid #ccc;
     margin: 1.5em 10px;
     padding: 0.5em 10px 0.5em 1em;
+}
+
+/**
+* Slide layout components
+*/
+
+.column {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.column h2 {
+    margin-top: 0;
 }
 
 /*
@@ -47,11 +64,18 @@ blockquote p {
 
 .slide {
     display: none;
+
+    width: 100%;
     padding: 20px;
+    flex-direction: column;
 }
 
 .slide.active {
-    display: block;
+    display: flex;
+}
+
+.slide-content {
+  display: flex;
 }
 
 .nav button {
@@ -80,6 +104,7 @@ blockquote p {
     {{ slides | safe }}
 </div>
 <div class='nav'>
+    <button id='fullscreen' title="Toggle Full Screen">⛶</button>
     <button id='prev' title="Previous Slide">&lt;&mdash;</button>
     <span id='slide-number'>1 of 1</span>
     <button id='next' title="Next Slide">&mdash;&gt;</button>
@@ -113,6 +138,14 @@ blockquote p {
             document.getElementById("slide-number").textContent = `${currentSlide + 1} of ${slides.length}`;
         }
 
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+        }
+
         currentSlide = getSlideFromHash();
         showSlide(currentSlide);
 
@@ -122,6 +155,7 @@ blockquote p {
         document.getElementById("next").onclick = () => {
             if (currentSlide < slides.length - 1) showSlide(currentSlide + 1);
         };
+        document.getElementById("fullscreen").onclick = toggleFullScreen;
 
         document.addEventListener("keydown", function(event) {
             if (event.key === "ArrowRight" || event.key === " ") {

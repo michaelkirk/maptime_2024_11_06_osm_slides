@@ -1,9 +1,67 @@
-# Using OpenStreetMap Data
+# <br /><br />Using OpenStreetMap Data
 
-Now that we've all spent a bunch of time putting data into OSM,
-let's get it back out again.
+Now that we've all spent some time putting data **into** OSM,
+let's get some data **out** of OSM.
 
-# overpass t-t-turbo!!! 🔥🔥🔥
+# But first...
+## a pedantic diversion.
+
+# What is OpenStreetMap?
+
+# What is OpenStreetMap?
+
+- It's a website: [openstreetmap.org](https://openstreetmap.org).
+
+# What is OpenStreetMap?
+
+- It's a website: [openstreetmap.org](https://openstreetmap.org).
+- It's an accumulation of facts (a database).
+
+# Facts, you say?
+
+# Facts, you say?
+
+Two kinds of facts in OSM.
+
+# Facts, you say?
+
+<div class="column">
+
+## Geometry
+
+Where the thing is.
+
+</div>
+
+# Facts, you say?
+
+<div class="column">
+
+## Geometry
+
+Where the thing is.
+
+</div>
+
+<div class="column">
+
+## Tags 
+
+What the thing is.
+
+</div>
+
+# Geometry: Where the thing is
+
+Pretty self-explanatory conceptually, though the details can be tricky. 
+
+All geometry in OSM is stored as latitude and longitude (e.g. no projected points).
+
+When doing a query you'll often want to know the "bounds" of your area of interest.
+
+# Tags: What the thing is.
+
+# Overpass t-t-t-turbo 🔥🔥🔥
 
 Overpass Turbo is a website for extracting data from OSM.
 
@@ -29,11 +87,11 @@ Rather than querying a remote API, download "all the data" and do queries locall
 
 <img src="images/could-should.jpeg" width=70% style="margin-left: 15%;" />
 
-# So, should you use OSM data?
+# So, *should* you use OSM data?
 
-# So, should you use OSM data?
+# So, *should* you use OSM data?
 
-  - Completeness:
+  - Completeness?
 
 # Is OSM Complete?
 
@@ -54,8 +112,8 @@ Best with things that don't frequently change:
 - major geographic features
 - political borders
 - most roads
-- buildings dense areas
-- long lived businesses, churches, libraries, hospitals
+- buildings in larger cities
+- long-lived businesses, churches, libraries, hospitals
 - places where map nerds with extra time live
 
 # Is OSM Complete?
@@ -63,20 +121,20 @@ Best with things that don't frequently change:
 Conversely, OSM is less good at things that change often.
 
 - recently opened businesses
-- website URLs
-- business opening hours
-- minor roads, less populated areas
+- tags not visible on osm.org (non-geometry data) tend to be worse
+  - website URLs
+  - business opening hours
+  - minor roads, less populated areas
 
+# So, *should* you use OSM data?
 
-# So, should you use OSM data?
+  - Completeness?
 
-  - Completeness:
-
-# So, should you use OSM data?
+# So, *should* you use OSM data?
 
   - Completeness: Best for things that don't change a lot.
 
-# So, should you use OSM data?
+# So, *should* you use OSM data?
 
   - Completeness: Best for things that don't change a lot.
   - Correctness:
