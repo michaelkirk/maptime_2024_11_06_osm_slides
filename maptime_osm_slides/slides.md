@@ -5,31 +5,100 @@ let's get it back out again.
 
 # overpass t-t-turbo!!! 🔥🔥🔥
 
-<https://wiki.openstreetmap.org/wiki/Overpass_API>
+Overpass Turbo is a website for extracting data from OSM.
 
 <https://overpass-turbo.eu>
 
+# Overpass: ⚠️ caveats
+
+<https://wiki.openstreetmap.org/wiki/Overpass_API>
+
 > It can take a couple of minutes for [changes](https://wiki.openstreetmap.org/wiki/Changeset "Changeset") to the [database](https://wiki.openstreetmap.org/wiki/Database "Database") to show up in the Overpass API query results.
 
-Quick and "easy" for small-ish "one-time" exports. {.my-class}
+# Overpass: ⚠️ caveats
 
-What if I need a bigger export? Or I want to perform a bunch of different queries quickly?
+Quick and "easy" for small-ish one-off exports.
 
-# osmium cli tool
+What if I need a bigger (or faster) export?
 
-Rather than querying a remote API, download "all the data" and do queries locally with osmosis 
+# osmium (cli tool)
 
-Map template... web map?
-QGIS project?
+Rather than querying a remote API, download "all the data" and do queries locally.
 
-Assets to have available: Seattle.osm.pbf?
+# <span style="text-align: center">Part II</span>
 
-# <!-- jeff goldbloom meme -->
+<img src="images/could-should.jpeg" width=70% style="margin-left: 15%;" />
 
-<img src="images/could-should.jpeg" width=80% style="margin-left: 10%;" />
+# So, should you use OSM data?
 
-# Is OSM data reliable?
+# So, should you use OSM data?
 
+  - Completeness:
+
+# Is OSM Complete?
+
+# Is OSM Complete?
+
+Of course not.
+
+# Is OSM Complete?
+
+Of course not. But it's pretty good for some things!
+
+# Is OSM Complete?
+
+Of course not. But it's pretty good for some things!
+
+Best with things that don't frequently change:
+
+- major geographic features
+- political borders
+- most roads
+- buildings dense areas
+- long lived businesses, churches, libraries, hospitals
+- places where map nerds with extra time live
+
+# Is OSM Complete?
+
+Conversely, OSM is less good at things that change often.
+
+- recently opened businesses
+- website URLs
+- business opening hours
+- minor roads, less populated areas
+
+
+# So, should you use OSM data?
+
+  - Completeness:
+
+# So, should you use OSM data?
+
+  - Completeness: Best for things that don't change a lot.
+
+# So, should you use OSM data?
+
+  - Completeness: Best for things that don't change a lot.
+  - Correctness:
+
+# Is OSM data always correct?
+
+# Is OSM data always correct?
+
+Of course not.
+
+# Is OSM data always correct?
+
+Of course not. But it's usually pretty good!
+
+# Is OSM data always correct?
+
+Of course not. But it's usually pretty good!
+
+It's a public website, like wikipedia, so vandalism happens.
+But it's usually cleaned up quickly.
+
+<https://daylightmap.org> (Meta/Microsoft and others) exists as a "curated" subset of OSM for this purpose. Unfortunately it's being discontinued.
 
 # Is OSM data reliable?
 

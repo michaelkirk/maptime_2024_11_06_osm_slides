@@ -10,10 +10,12 @@ body {
     font-family: Arial, sans-serif;
     font-size: 300%;
     background: white;
-    margin: 64px
+    padding: 0;
+    margin: 64px 64px
 }
 
 h1 {
+margin-top: 0px;
     margin-bottom: 80px;
 }
 
@@ -85,33 +87,144 @@ let's get it back out again.</p>
 </div><!-- end slide-0 -->
 <div class='slide slide-0'><h1>overpass t-t-turbo!!! 🔥🔥🔥</h1>
 <div class='slide-content'>
-<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a></p>
+<p>Overpass Turbo is a website for extracting data from OSM.</p>
 <p><a href="https://overpass-turbo.eu">https://overpass-turbo.eu</a></p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>Overpass: ⚠️ caveats</h1>
+<div class='slide-content'>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a></p>
 <blockquote>
 <p>It can take a couple of minutes for <a href="https://wiki.openstreetmap.org/wiki/Changeset" title="Changeset">changes</a> to the <a href="https://wiki.openstreetmap.org/wiki/Database" title="Database">database</a> to show up in the Overpass API query results.</p>
 </blockquote>
-<p>Quick and "easy" for small-ish "one-time" exports. {.my-class}</p>
-<p>What if I need a bigger export? Or I want to perform a bunch of different queries quickly?</p>
 
 </div><!-- end slide-content -->
 </div><!-- end slide-0 -->
-<div class='slide slide-0'><h1>osmium cli tool</h1>
+<div class='slide slide-0'><h1>Overpass: ⚠️ caveats</h1>
 <div class='slide-content'>
-<p>Rather than querying a remote API, download "all the data" and do queries locally with osmosis</p>
-<p>Map template... web map?
-QGIS project?</p>
-<p>Assets to have available: Seattle.osm.pbf?</p>
+<p>Quick and "easy" for small-ish one-off exports.</p>
+<p>What if I need a bigger (or faster) export?</p>
 
 </div><!-- end slide-content -->
 </div><!-- end slide-0 -->
-<div class='slide slide-0'><h1><!-- jeff goldbloom meme --></h1>
+<div class='slide slide-0'><h1>osmium (cli tool)</h1>
 <div class='slide-content'>
-<img src="images/could-should.jpeg" width=80% style="margin-left: 10%;" />
+<p>Rather than querying a remote API, download "all the data" and do queries locally.</p>
 
 </div><!-- end slide-content -->
 </div><!-- end slide-0 -->
-<div class='slide slide-0'><h1>Is OSM data reliable?</h1>
+<div class='slide slide-0'><h1><span style="text-align: center">Part II</span></h1>
 <div class='slide-content'>
+<img src="images/could-should.jpeg" width=70% style="margin-left: 15%;" />
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>So, should you use OSM data?</h1>
+<div class='slide-content'>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>So, should you use OSM data?</h1>
+<div class='slide-content'>
+<ul>
+<li>Completeness:</li>
+</ul>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>Is OSM Complete?</h1>
+<div class='slide-content'>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>Is OSM Complete?</h1>
+<div class='slide-content'>
+<p>Of course not.</p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>Is OSM Complete?</h1>
+<div class='slide-content'>
+<p>Of course not. But it's pretty good for some things!</p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>Is OSM Complete?</h1>
+<div class='slide-content'>
+<p>Of course not. But it's pretty good for some things!</p>
+<p>Best with things that don't frequently change:</p>
+<ul>
+<li>major geographic features</li>
+<li>political borders</li>
+<li>most roads</li>
+<li>buildings dense areas</li>
+<li>long lived businesses, churches, libraries, hospitals</li>
+<li>places where map nerds with extra time live</li>
+</ul>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>Is OSM Complete?</h1>
+<div class='slide-content'>
+<p>Conversely, OSM is less good at things that change often.</p>
+<ul>
+<li>recently opened businesses</li>
+<li>website URLs</li>
+<li>business opening hours</li>
+<li>minor roads, less populated areas</li>
+</ul>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>So, should you use OSM data?</h1>
+<div class='slide-content'>
+<ul>
+<li>Completeness:</li>
+</ul>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>So, should you use OSM data?</h1>
+<div class='slide-content'>
+<ul>
+<li>Completeness: Best for things that don't change a lot.</li>
+</ul>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>So, should you use OSM data?</h1>
+<div class='slide-content'>
+<ul>
+<li>Completeness: Best for things that don't change a lot.</li>
+<li>Correctness:</li>
+</ul>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>Is OSM data always correct?</h1>
+<div class='slide-content'>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>Is OSM data always correct?</h1>
+<div class='slide-content'>
+<p>Of course not.</p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>Is OSM data always correct?</h1>
+<div class='slide-content'>
+<p>Of course not. But it's usually pretty good!</p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>Is OSM data always correct?</h1>
+<div class='slide-content'>
+<p>Of course not. But it's usually pretty good!</p>
+<p>It's a public website, like wikipedia, so vandalism happens.
+But it's usually cleaned up quickly.</p>
+<p><a href="https://daylightmap.org">https://daylightmap.org</a> (Meta/Microsoft and others) exists as a "curated" subset of OSM for this purpose. Unfortunately it's being discontinued.</p>
 
 </div><!-- end slide-content -->
 </div><!-- end slide-0 -->

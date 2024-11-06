@@ -10,10 +10,12 @@ body {
     font-family: Arial, sans-serif;
     font-size: 300%;
     background: white;
-    margin: 64px
+    padding: 0;
+    margin: 64px 64px
 }
 
 h1 {
+margin-top: 0px;
     margin-bottom: 80px;
 }
 
