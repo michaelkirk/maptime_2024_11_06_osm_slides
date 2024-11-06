@@ -150,9 +150,10 @@ QGIS project?</p>
 
         function showSlide(index) {
             slides[currentSlide].classList.remove("active");
-            currentSlide = (index + slides.length) % slides.length;
+            currentSlide = index;
             slides[currentSlide].classList.add("active");
             window.location.hash = `slide-id=${currentSlide}`;
+            updateNavButtons();
         }
 
         function getSlideFromHash() {
@@ -161,15 +162,28 @@ QGIS project?</p>
             return match ? parseInt(match[1], 10) : 0;
         }
 
+        function updateNavButtons() {
+            document.getElementById("prev").disabled = currentSlide === 0;
+            document.getElementById("next").disabled = currentSlide === slides.length - 1;
+        }
+
         currentSlide = getSlideFromHash();
         showSlide(currentSlide);
 
-        document.getElementById("prev").onclick = () => showSlide(currentSlide - 1);
-        document.getElementById("next").onclick = () => showSlide(currentSlide + 1);
+        document.getElementById("prev").onclick = () => {
+            if (currentSlide > 0) showSlide(currentSlide - 1);
+        };
+        document.getElementById("next").onclick = () => {
+            if (currentSlide < slides.length - 1) showSlide(currentSlide + 1);
+        };
 
         document.addEventListener("keydown", function(event) {
-            if (event.key === "ArrowRight" || event.key === " ") showSlide(currentSlide + 1);
-            if (event.key === "ArrowLeft") showSlide(currentSlide - 1);
+            if (event.key === "ArrowRight" || event.key === " ") {
+                if (currentSlide < slides.length - 1) showSlide(currentSlide + 1);
+            }
+            if (event.key === "ArrowLeft") {
+                if (currentSlide > 0) showSlide(currentSlide - 1);
+            }
         });
 
         const urlParams = new URLSearchParams(window.location.search);
