@@ -41,10 +41,10 @@ fn generate_slideshow_html(markdown: &str) -> String {
                         Event::End(TagEnd::Heading(HeadingLevel::H1)) => false,
                         _ => true,
                     }
-                }));
+                })).chain(std::iter::once(Event::End(TagEnd::Heading(HeadingLevel::H1))));
 
             html_output.push_str(&format!(
-                "<div class='slide'><!-- begin slide {slide_idx} -->"
+                "\n<div class='slide slide-{slide_idx}'>"
             ));
             pulldown_cmark::html::push_html(&mut html_output, h1_parser);
         }
@@ -59,11 +59,11 @@ fn generate_slideshow_html(markdown: &str) -> String {
                 }
                 _ => true,
             });
-            html_output.push_str(&"<div class='slide-content'>");
+            html_output.push_str(&"<div class='slide-content'>\n");
             pulldown_cmark::html::push_html(&mut html_output, section_parser);
-            html_output.push_str(&"</div><!-- end slide-content -->");
+            html_output.push_str(&"\n</div><!-- end slide-content -->");
         }
-        html_output.push_str(&format!("</div><!-- end slide {slide_idx} -->"));
+        html_output.push_str(&format!("\n</div><!-- end slide-{slide_idx} -->"));
     }
 
     let tera = Tera::new("templates/*").expect("Failed to initialize Tera");
