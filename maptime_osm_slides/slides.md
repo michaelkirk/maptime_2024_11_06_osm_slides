@@ -4,7 +4,7 @@ Now that we've all spent some time putting data **into** OSM,
 let's get some data **out** of OSM.
 
 # But first...
-## a pedantic diversion.
+## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a pedantic diversion.
 
 # What is OpenStreetMap?
 
@@ -45,7 +45,28 @@ Where the thing is.
 
 <div class="column">
 
-## Tags 
+## Tags
+
+What the thing is.
+
+</div>
+
+# Facts, you say?
+
+<div class="column">
+
+## Geometry
+<p>
+<span class="highlight-bg">
+Where the thing is.
+</span>
+</p>
+
+</div>
+
+<div class="column">
+
+## Tags
 
 What the thing is.
 
@@ -53,13 +74,244 @@ What the thing is.
 
 # Geometry: Where the thing is
 
-Pretty self-explanatory conceptually, though the details can be tricky. 
-
 All geometry in OSM is stored as latitude and longitude (e.g. no projected points).
 
-When doing a query you'll often want to know the "bounds" of your area of interest.
+# It's a big planet out there.
 
-# Tags: What the thing is.
+<div class="column">
+
+To avoid examining the entire planet, typically you'll "bound" your area of interest.
+
+**Seattle's approximate bounds**<br />
+bottom left: -122.46, 47.48 <br />
+top right: -122.22, 47.73
+
+</div>
+<div class="column">
+<img src="images/seattle-bounds.png" width=70% style="margin-left: 15%;" />
+</div>
+
+
+# Facts, you say?
+
+<div class="column">
+
+## Geometry
+
+Where the thing is.
+
+</div>
+
+<div class="column">
+
+## Tags
+
+What the thing is.
+
+</div>
+
+
+# Facts, you say?
+
+<div class="column">
+
+## Geometry
+
+Where the thing is.
+
+</div>
+
+<div class="column">
+
+## Tags
+
+<span class="highlight-bg">What the thing is.</span>
+
+</div>
+
+# Tags: What the thing is
+
+
+# Tags: What the thing is
+
+<table style="text-align:center;">
+<tr>
+  <th width="50%">Thing</th>
+  <th></th>
+</tr>
+<tr>
+<td>a highway</td>
+<td class="osm-tag"></td>
+</tr>
+<tr>
+<td></td>
+<td class="osm-tag"></td>
+</tr>
+<tr>
+<td></td>
+<td class="osm-tag"></td>
+</tr>
+<tr>
+<td></td>
+<td class="osm-tag"></td>
+</tr>
+</table>
+
+# Tags: What the thing is
+
+<table style="text-align:center;">
+<tr>
+  <th width="50%">Thing</th>
+  <th></th>
+</tr>
+<tr>
+<td>a highway</td>
+<td class="osm-tag"></td>
+</tr>
+<tr>
+<td>a park</td>
+<td class="osm-tag"></td>
+</tr>
+<tr>
+<td></td>
+<td class="osm-tag"></td>
+</tr>
+<tr>
+<td></td>
+<td class="osm-tag"></td>
+</tr>
+</table>
+
+# Tags: What the thing is
+
+<table style="text-align:center;">
+<tr>
+  <th width="50%">Thing</th>
+  <th></th>
+</tr>
+<tr>
+<td>a highway</td>
+<td class="osm-tag"></td>
+</tr>
+<tr>
+<td>a park</td>
+<td class="osm-tag"></td>
+</tr>
+<tr>
+<td>a building</td>
+<td class="osm-tag"></td>
+</tr>
+<tr>
+<td>a water fountain</td>
+<td class="osm-tag"></td>
+</tr>
+</table>
+
+# Tags: What the thing is
+
+<table style="text-align:center;">
+<tr>
+  <th width="50%">Thing</th>
+  <th>Tag</th>
+</tr>
+<tr>
+<td>a highway</td>
+<td class="osm-tag"></td>
+</tr>
+<tr>
+<td>a park</td>
+<td class="osm-tag"></td>
+</tr>
+<tr>
+<td>a building</td>
+<td class="osm-tag"></td>
+</tr>
+<tr>
+<td>a water fountain</td>
+<td class="osm-tag"></td>
+</tr>
+</table>
+
+# Tags: What the thing is
+
+<table style="text-align:center;">
+<tr>
+  <th width="50%">Thing</th>
+  <th>Tag</th>
+</tr>
+<tr>
+<td>a highway</td>
+<td class="osm-tag">highway=motorway</td>
+</tr>
+<tr>
+<td>a park</td>
+<td class="osm-tag"></td>
+</tr>
+<tr>
+<td>a building</td>
+<td class="osm-tag"></td>
+</tr>
+<tr>
+<td>a water fountain</td>
+<td class="osm-tag"></td>
+</tr>
+</table>
+
+# Tags: What the thing is
+
+<table style="text-align:center;">
+<tr>
+  <th width="50%">Thing</th>
+  <th>Tag</th>
+</tr>
+<tr>
+<td>a highway</td>
+<td class="osm-tag">highway=motorway</td>
+</tr>
+<tr>
+<td>a park</td>
+<td class="osm-tag">leisure=park</td>
+</tr>
+<tr>
+<td>a building</td>
+<td class="osm-tag"></td>
+</tr>
+<tr>
+<td>a water fountain</td>
+<td class="osm-tag"></td>
+</tr>
+</table>
+
+# Tags: What the thing is
+
+<style>
+table .osm-tag {
+    font-family: monospace;
+}
+</style>
+<table style="text-align:center;">
+<tr>
+  <th width="50%">Thing</th>
+  <th>Tag</th>
+</tr>
+<tr>
+<td>a highway</td>
+<td class="osm-tag">highway=motorway</td>
+</tr>
+<tr>
+<td>a park</td>
+<td class="osm-tag">leisure=park</td>
+</tr>
+<tr>
+<td>a building</td>
+<td class="osm-tag">building=house</td>
+</tr>
+<tr>
+<td>a water fountain</td>
+<td class="osm-tag">amenity=drinking_water</td>
+</tr>
+</table>
+
 
 # Overpass t-t-t-turbo 🔥🔥🔥
 
@@ -71,7 +323,7 @@ Overpass Turbo is a website for extracting data from OSM.
 
 <https://wiki.openstreetmap.org/wiki/Overpass_API>
 
-> It can take a couple of minutes for [changes](https://wiki.openstreetmap.org/wiki/Changeset "Changeset") to the [database](https://wiki.openstreetmap.org/wiki/Database "Database") to show up in the Overpass API query results.
+> It can take a couple of minutes for [changes](https://wiki.openstreetmap.org/wiki/Changeset "Changeset") to the database](https://wiki.openstreetmap.org/wiki/Database "Database") to show up in the Overpass API query results.
 
 # Overpass: ⚠️ caveats
 

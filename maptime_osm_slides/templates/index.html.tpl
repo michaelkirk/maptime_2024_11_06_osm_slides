@@ -40,8 +40,13 @@ blockquote {
     flex-direction: column;
 }
 
-.column h2 {
+/* first content in slide is already pushed down because it has an h1 at the top */
+.column :first-child {
     margin-top: 0;
+}
+
+.highlight-bg {
+    background: rgba(0, 160, 255, 0.2)
 }
 
 /*
@@ -76,6 +81,11 @@ blockquote p {
 
 .slide-content {
   display: flex;
+  flex-direction: column;
+}
+
+.slide-content:has(.column) {
+    flex-direction: row;
 }
 
 .nav button {

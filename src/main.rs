@@ -17,7 +17,7 @@ fn main() {
 fn generate_slideshow_html(markdown: &str) -> String {
     let mut html_output = String::new();
 
-    let slide_idx = 0;
+    let mut slide_idx = 0;
     let mut parser = Parser::new(markdown).into_iter();
 
     let mut slide_header = parser.next();
@@ -64,6 +64,7 @@ fn generate_slideshow_html(markdown: &str) -> String {
             html_output.push_str(&"\n</div><!-- end slide-content -->");
         }
         html_output.push_str(&format!("\n</div><!-- end slide-{slide_idx} -->"));
+        slide_idx += 1;
     }
 
     let tera = Tera::new("templates/*").expect("Failed to initialize Tera");
