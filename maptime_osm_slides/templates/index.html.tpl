@@ -65,6 +65,12 @@ blockquote p {
     justify-content: center;
 }
 
+#slide-number {
+    font-size: 12px;
+    margin-top: 16px;
+    opacity: 0.5;
+}
+
     </style>
 </head>
 <body>
@@ -73,6 +79,7 @@ blockquote p {
 </div>
 <div class='nav'>
     <button id='prev' title="Previous Slide">&lt;&mdash;</button>
+    <span id='slide-number'>1 of 1</span>
     <button id='next' title="Next Slide">&mdash;&gt;</button>
 </div>
 <script>
@@ -86,6 +93,7 @@ blockquote p {
             slides[currentSlide].classList.add("active");
             window.location.hash = `slide-id=${currentSlide}`;
             updateNavButtons();
+            updateSlideNumber();
         }
 
         function getSlideFromHash() {
@@ -97,6 +105,10 @@ blockquote p {
         function updateNavButtons() {
             document.getElementById("prev").disabled = currentSlide === 0;
             document.getElementById("next").disabled = currentSlide === slides.length - 1;
+        }
+
+        function updateSlideNumber() {
+            document.getElementById("slide-number").textContent = `${currentSlide + 1} of ${slides.length}`;
         }
 
         currentSlide = getSlideFromHash();
