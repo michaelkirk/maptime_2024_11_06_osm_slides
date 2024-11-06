@@ -3,48 +3,67 @@
 <head>
     <meta charset='utf-8'>
     <style>
-
 /**
 * Typography
 */
-        body {
-            font-family: Arial, sans-serif;
-            font-size: 300%;
-            background: white;
-            margin: 64px
-        }
+body {
+    font-family: Arial, sans-serif;
+    font-size: 300%;
+    background: white;
+    margin: 64px
+}
 
-        h1 {
-            margin-bottom: 80px;
-        }
+h1 {
+    margin-bottom: 80px;
+}
 
-        /**
-         * Slides UI
-         */
+blockquote {
+    font-style: italic;
+    color: #777;
+    border-left: 4px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px 0.5em 1em;
+}
 
+/*
+blockquote:before {
+    content: open-quote;
+}
 
-        .slide {
-            display: none;
-            padding: 20px;
-            text-align: center;
-        }
+blockquote:after {
+    content: close-quote;
+}
+*/
 
-        .slide.active {
-            display: block;
-        }
+blockquote p {
+    display: inline;
+}
 
-        .nav button {
-            padding: 5px 10px;
-            margin: 10px;
-        }
+/**
+ * Slides UI
+ */
 
-        .nav {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            display: flex;
-            justify-content: center;
-        }
+.slide {
+    display: none;
+    padding: 20px;
+}
+
+.slide.active {
+    display: block;
+}
+
+.nav button {
+    padding: 5px 10px;
+    margin: 10px;
+}
+
+.nav {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+}
 
     </style>
 </head>
@@ -58,21 +77,64 @@ let's get it back out again.</p>
 
 </div><!-- end slide-content -->
 </div><!-- end slide-0 -->
-<div class='slide slide-0'><h1>overpass t-t-t-t-t-tuuurbbboooo</h1>
+<div class='slide slide-0'><h1>overpass t-t-turbo!!! 🔥🔥🔥</h1>
 <div class='slide-content'>
-<p>overpass-turbo
-https://wiki.openstreetmap.org/wiki/Overpass_API</p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a></p>
+<p><a href="https://overpass-turbo.eu">https://overpass-turbo.eu</a></p>
 <blockquote>
 <p>It can take a couple of minutes for <a href="https://wiki.openstreetmap.org/wiki/Changeset" title="Changeset">changes</a> to the <a href="https://wiki.openstreetmap.org/wiki/Database" title="Database">database</a> to show up in the Overpass API query results.</p>
 </blockquote>
-<p>Quick and "easy" for small-ish "one-time" exports.</p>
+<p>Quick and "easy" for small-ish "one-time" exports. {.my-class}</p>
 <p>What if I need a bigger export? Or I want to perform a bunch of different queries quickly?</p>
-<h3>osmium cli tool</h3>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>osmium cli tool</h1>
+<div class='slide-content'>
 <p>Rather than querying a remote API, download "all the data" and do queries locally with osmosis</p>
 <p>Map template... web map?
 QGIS project?</p>
 <p>Assets to have available: Seattle.osm.pbf?</p>
-<p>second slide content</p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1><!-- jeff goldbloom meme --></h1>
+<div class='slide-content'>
+<img src="images/could-should.jpeg" width=80% style="margin-left: 10%;" />
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>Is OSM data reliable?</h1>
+<div class='slide-content'>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>Is OSM data reliable?</h1>
+<div class='slide-content'>
+<p>Well... it depends.</p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>Where does OSM data come from?</h1>
+<div class='slide-content'>
+<p>Mostly volunteers.</p>
+<ul>
+<li>Passing hobbyists with a few minutes to spend.</li>
+<li>Prolific enthusiasts (like <a href="https://www.openstreetmap.org/user/Glassman">Clifford</a>!).</li>
+<li>People like <a href="https://www.openstreetmap.org/user/michael_kirk">me</a> who make about 3 edits a year. 😬</li>
+</ul>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>Where does OSM data come from?</h1>
+<div class='slide-content'>
+<p>More and more coporate editing for specific datasets - e.g. amazon and driveways.</p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-0 -->
+<div class='slide slide-0'><h1>TODO</h1>
+<div class='slide-content'>
+<p>Add slide count</p>
 
 </div><!-- end slide-content -->
 </div><!-- end slide-0 -->

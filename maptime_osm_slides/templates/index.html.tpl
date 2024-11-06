@@ -3,48 +3,67 @@
 <head>
     <meta charset='utf-8'>
     <style>
-
 /**
 * Typography
 */
-        body {
-            font-family: Arial, sans-serif;
-            font-size: 300%;
-            background: white;
-            margin: 64px
-        }
+body {
+    font-family: Arial, sans-serif;
+    font-size: 300%;
+    background: white;
+    margin: 64px
+}
 
-        h1 {
-            margin-bottom: 80px;
-        }
+h1 {
+    margin-bottom: 80px;
+}
 
-        /**
-         * Slides UI
-         */
+blockquote {
+    font-style: italic;
+    color: #777;
+    border-left: 4px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px 0.5em 1em;
+}
 
+/*
+blockquote:before {
+    content: open-quote;
+}
 
-        .slide {
-            display: none;
-            padding: 20px;
-            text-align: center;
-        }
+blockquote:after {
+    content: close-quote;
+}
+*/
 
-        .slide.active {
-            display: block;
-        }
+blockquote p {
+    display: inline;
+}
 
-        .nav button {
-            padding: 5px 10px;
-            margin: 10px;
-        }
+/**
+ * Slides UI
+ */
 
-        .nav {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            display: flex;
-            justify-content: center;
-        }
+.slide {
+    display: none;
+    padding: 20px;
+}
+
+.slide.active {
+    display: block;
+}
+
+.nav button {
+    padding: 5px 10px;
+    margin: 10px;
+}
+
+.nav {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+}
 
     </style>
 </head>
