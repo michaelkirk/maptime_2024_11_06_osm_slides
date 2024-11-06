@@ -34,9 +34,7 @@
 </head>
 <body>
     <div id='slideshow'>
-        <div class='slide'><!-- begin slide 0 --><h1>first slide header<div class='slide-content'><p>first slide content</p>
-</div><!-- end slide-content --></div><!-- end slide 0 --><div class='slide'><!-- begin slide 0 --><h1>second slide header<div class='slide-content'><p>second slide content</p>
-</div><!-- end slide-content --></div><!-- end slide 0 -->
+        {{ slides | safe }}
     </div>
     <div class='nav'>
         <button id='prev'>Previous</button>
