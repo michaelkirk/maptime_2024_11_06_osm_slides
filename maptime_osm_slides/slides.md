@@ -10,7 +10,6 @@ https://wiki.openstreetmap.org/wiki/Overpass_API
 
 > It can take a couple of minutes for [changes](https://wiki.openstreetmap.org/wiki/Changeset "Changeset") to the [database](https://wiki.openstreetmap.org/wiki/Database "Database") to show up in the Overpass API query results.
 
-
 Quick and "easy" for small-ish "one-time" exports.
 
 What if I need a bigger export? Or I want to perform a bunch of different queries quickly?
