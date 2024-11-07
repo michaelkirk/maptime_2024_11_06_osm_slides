@@ -1,5 +1,7 @@
 # Hi
 
+<img style="width: 400px; margin-left: 500px" src="images%2Fqr-code.png" />
+
 # <br /><br />Using OpenStreetMap Data
 
 Now that we've all spent some time putting data **into** OSM,
