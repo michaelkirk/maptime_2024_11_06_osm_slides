@@ -1,3 +1,5 @@
+# Hi
+
 # <br /><br />Using OpenStreetMap Data
 
 Now that we've all spent some time putting data **into** OSM,
@@ -725,4 +727,13 @@ Generally it's OK to use OSM data in your projects, but you must attribute OSM a
 - It's a website: [openstreetmap.org](https://openstreetmap.org).
 - It's an accumulation of facts (a database).
 - It's a bunch of supporting documentation and documented techniques.
-- It's a community of people trying to collaborate on a **huge** project. ❤️
+- It's a community.
+
+# What is OpenStreetMap?
+
+- It's a website: [openstreetmap.org](https://openstreetmap.org).
+- It's an accumulation of facts (a database).
+- It's a bunch of supporting documentation and documented techniques.
+- It's a community — people trying to collaborate on a **huge** project together. ❤️
+
+# ❤️

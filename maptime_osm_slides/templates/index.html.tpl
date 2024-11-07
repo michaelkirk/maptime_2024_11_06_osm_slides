@@ -15,10 +15,12 @@ body {
 }
 
 h1 {
+    text-align: center;
     margin-bottom: 80px;
 }
 
 h2 {
+    text-align: center;
   margin-block-end: 0.2em;
 }
 
