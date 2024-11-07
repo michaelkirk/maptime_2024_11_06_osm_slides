@@ -8,9 +8,16 @@ let's get some data **out** of OSM.
 
 # What is OpenStreetMap?
 
+- ???
+
 # What is OpenStreetMap?
 
 - It's a website: [openstreetmap.org](https://openstreetmap.org).
+
+# What is OpenStreetMap?
+
+- It's a website: [openstreetmap.org](https://openstreetmap.org).
+- ???
 
 # What is OpenStreetMap?
 
@@ -104,7 +111,7 @@ Where the thing is.
 
 <div class="column">
 
-## Tags
+##  <span style="line-height: 92px">Tags</span>
 
 What the thing is.
 
@@ -123,7 +130,7 @@ Where the thing is.
 
 <div class="column">
 
-## Tags
+##  <span style="line-height: 92px">Tags</span>
 
 <span class="highlight-bg">What the thing is.</span>
 
@@ -508,15 +515,18 @@ from: <https://wiki.openstreetmap.org/wiki/Overpass_API>
 
 # An aside
 
-You know about wiki.openstreetmap.org, right?
-
-<https://wiki.openstreetmap.org>
-
+You know about [wiki.openstreetmap.org](https://wiki.openstreetmap.org), right?
 
 # What is OpenStreetMap?
 
 - It's a website: [openstreetmap.org](https://openstreetmap.org).
 - It's an accumulation of facts (a database).
+
+# What is OpenStreetMap?
+
+- It's a website: [openstreetmap.org](https://openstreetmap.org).
+- It's an accumulation of facts (a database).
+- ???
 
 # What is OpenStreetMap?
 
