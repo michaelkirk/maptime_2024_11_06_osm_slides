@@ -86,6 +86,7 @@ blockquote p {
 
 .slide-content:has(.column) {
     flex-direction: row;
+    gap: 32px;
 }
 
 .nav button {
@@ -220,7 +221,7 @@ top right: -122.22, 47.73</p>
 <div class='slide slide-12'><h1>Facts, you say?</h1>
 <div class='slide-content'>
 <div class="column">
-<h2>Geometry</h2>
+<h2>Geometry ✅</h2>
 <p>Where the thing is.</p>
 </div>
 <div class="column">
@@ -233,7 +234,7 @@ top right: -122.22, 47.73</p>
 <div class='slide slide-13'><h1>Facts, you say?</h1>
 <div class='slide-content'>
 <div class="column">
-<h2>Geometry</h2>
+<h2>Geometry ✅</h2>
 <p>Where the thing is.</p>
 </div>
 <div class="column">
@@ -442,72 +443,360 @@ table .osm-tag {
 
 </div><!-- end slide-content -->
 </div><!-- end slide-21 -->
-<div class='slide slide-22'><h1>Overpass t-t-t-turbo 🔥🔥🔥</h1>
+<div class='slide slide-22'><h1>Tags: What the thing is</h1>
 <div class='slide-content'>
-<p>Overpass Turbo is a website for extracting data from OSM.</p>
-<p><a href="https://overpass-turbo.eu">https://overpass-turbo.eu</a></p>
+<style>
+.osm-tag {
+    font-family: monospace;
+}
+</style>
+<table style="text-align:center;">
+<tr>
+  <th width="50%">Thing</th>
+  <th>Tag</th>
+</tr>
+<tr>
+<td>a highway</td>
+<td class="osm-tag highlight-bg">highway=motorway</td>
+</tr>
+<tr>
+<td>a park</td>
+<td class="osm-tag">leisure=park</td>
+</tr>
+<tr>
+<td>a building</td>
+<td class="osm-tag">building=house</td>
+</tr>
+<tr>
+<td>a water fountain</td>
+<td class="osm-tag">amenity=drinking_water</td>
+</tr>
+</table>
+<p style="text-align: center; font-weight: bold">Let's take a closer look.</p>
 
 </div><!-- end slide-content -->
 </div><!-- end slide-22 -->
-<div class='slide slide-23'><h1>Overpass: ⚠️ caveats</h1>
+<div class='slide slide-23'><h1>Tags: A closer look. 👀</h1>
 <div class='slide-content'>
-<p><a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a></p>
-<blockquote>
-<p>It can take a couple of minutes for <a href="https://wiki.openstreetmap.org/wiki/Changeset" title="Changeset">changes</a> to the database](https://wiki.openstreetmap.org/wiki/Database "Database") to show up in the Overpass API query results.</p>
-</blockquote>
+<p style="margin-top: -40px;" class="osm-tag">highway=motorway</p>
+<p>Tags are "key value" pairs.</p>
+<ul>
+<li><strong>key:</strong> <code>highway</code></li>
+<li><strong>value</strong>: <code>motorway</code></li>
+</ul>
 
 </div><!-- end slide-content -->
 </div><!-- end slide-23 -->
-<div class='slide slide-24'><h1>Overpass: ⚠️ caveats</h1>
+<div class='slide slide-24'><h1>Tags: A closer look. 👀</h1>
 <div class='slide-content'>
-<p>Quick and "easy" for small-ish one-off exports.</p>
-<p>What if I need a bigger (or faster) export?</p>
+<div class="column">
+<p><strong>key:</strong> <code>highway</code></p>
+<p>A given <code>key</code> has potentialy many values</p>
+</div>
+<div class="column">
+<ul>
+<li><code>highway=motorway</code></li>
+<li><code>highway=residential</code></li>
+<li><code>highway=trunk</code></li>
+<li><code>highway=service</code></li>
+<li>and more!</li>
+</ul>
+</div>
 
 </div><!-- end slide-content -->
 </div><!-- end slide-24 -->
-<div class='slide slide-25'><h1>osmium (cli tool)</h1>
+<div class='slide slide-25'><h1>Tags: What do they all mean?</h1>
 <div class='slide-content'>
-<p>Rather than querying a remote API, download "all the data" and do queries locally.</p>
+<div style="margin-top: -32px">
+<ul>
+<li><code>highway=motorway</code></li>
+<li><code>highway=residential</code></li>
+<li><code>highway=trunk</code></li>
+<li><code>highway=service</code></li>
+</ul>
+</div>
+<p>taginfo: An OSM mapper's best friend.
+<a href="https://taginfo.openstreetmap.org/keys/highway#values">https://taginfo.openstreetmap.org/keys/highway#values</a></p>
 
 </div><!-- end slide-content -->
 </div><!-- end slide-25 -->
-<div class='slide slide-26'><h1><span style="text-align: center">Part II</span></h1>
+<div class='slide slide-26'><h1>An example, right outside.</h1>
+<div class='slide-content'>
+<p><a href="https://www.openstreetmap.org/way/140804207#map=16/47.66617/-122.37364">www.openstreetmap.org/way/140804207</a></p>
+<br />
+<br />
+<br />
+<br />
+<img src="images/osm-road-example.png" />
+
+</div><!-- end slide-content -->
+</div><!-- end slide-26 -->
+<div class='slide slide-27'><h1>Tag as many as you'd like!</h1>
+<div class='slide-content'>
+<p><a href="https://taginfo.openstreetmap.org/keys/highway#combinations">https://taginfo.openstreetmap.org/keys/highway#combinations</a></p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-27 -->
+<div class='slide slide-28'><h1>Facts, you say?</h1>
+<div class='slide-content'>
+<div class="column">
+<h2>Geometry ✅</h2>
+<p>Where the thing is.</p>
+</div>
+<div class="column">
+<h2><span style="line-height: 92px">Tags</span></h2>
+<p>What the thing is.</p>
+</div>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-28 -->
+<div class='slide slide-29'><h1>Facts, you say?</h1>
+<div class='slide-content'>
+<div class="column">
+<h2>Geometry ✅</h2>
+<p>Where the thing is.</p>
+</div>
+<div class="column">
+<h2><span style="line-height: 92px">Tags ✅</span></h2>
+<p>What the thing is.</p>
+</div>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-29 -->
+<div class='slide slide-30'><h1>But first...</h1>
+<div class='slide-content'>
+<h2><span style="line-height: 92px">      a pedantic diversion.</span></h2>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-30 -->
+<div class='slide slide-31'><h1>But first...</h1>
+<div class='slide-content'>
+<h2><span style="line-height: 92px">      a pedantic diversion. ✅✅✅</span></h2>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-31 -->
+<div class='slide slide-32'><h1>But first...</h1>
+<div class='slide-content'>
+<h2><span style="line-height: 92px">      a pedantic diversion. ✅✅✅</span></h2>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-32 -->
+<div class='slide slide-33'><h1></h1>
+<div class='slide-content'>
+<h2 style="text-align: center; margin-top: -32px;">(starting over)</h2>
+<h1>Using OpenStreetMap Data</h1>
+<p>Now that we've all spent some time putting data <strong>into</strong> OSM,
+let's get some data <strong>out</strong> of OSM.</p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-33 -->
+<div class='slide slide-34'><h1>Overpass t-t-t-turbo 🔥🔥🔥</h1>
+<div class='slide-content'>
+<p>Overpass Turbo is a website for getting specific data out of OSM.</p>
+<p><a href="https://overpass-turbo.eu">https://overpass-turbo.eu</a></p>
+<img src="images/overpass-seattle-postoffices.png" max-width="100%"/>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-34 -->
+<div class='slide slide-35'><h1>Overpass t-t-t-turbo 🔥🔥</h1>
+<div class='slide-content'>
+<ul>
+<li>Run your query</li>
+</ul>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-35 -->
+<div class='slide slide-36'><h1>Overpass t-t-t-turbo 🔥🔥</h1>
+<div class='slide-content'>
+<ul>
+<li>Run your query</li>
+<li>Export your preferred format</li>
+</ul>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-36 -->
+<div class='slide slide-37'><h1>Overpass: ⚠️ caveats</h1>
+<div class='slide-content'>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-37 -->
+<div class='slide slide-38'><h1>Overpass: ⚠️ caveats</h1>
+<div class='slide-content'>
+<p>The query language is</p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-38 -->
+<div class='slide slide-39'><h1>Overpass: ⚠️ caveats</h1>
+<div class='slide-content'>
+<p>The query language is...</p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-39 -->
+<div class='slide slide-40'><h1>Overpass: ⚠️ caveats</h1>
+<div class='slide-content'>
+<p>The query language is... really something.</p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-40 -->
+<div class='slide slide-41'><h1>Overpass: ⚠️ caveats</h1>
+<div class='slide-content'>
+<p>The query language is... really something.</p>
+<p>It's powerful, but not easy for me.</p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-41 -->
+<div class='slide slide-42'><h1>Overpass: ⚠️ caveats</h1>
+<div class='slide-content'>
+<p>The query language is... really something.</p>
+<p>It's powerful, but not easy for me.</p>
+<p>Try chatgpt? (But verify!!)</p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-42 -->
+<div class='slide slide-43'><h1>Overpass: ⚠️ caveats</h1>
+<div class='slide-content'>
+<blockquote>
+<p>It can take a couple of minutes for <a href="https://wiki.openstreetmap.org/wiki/Changeset" title="Changeset">changes</a> to the <a href="https://wiki.openstreetmap.org/wiki/Database" title="Database">database</a> to show up in the Overpass API query results.</p>
+</blockquote>
+<p>from: <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">https://wiki.openstreetmap.org/wiki/Overpass_API</a></p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-43 -->
+<div class='slide slide-44'><h1>An aside</h1>
+<div class='slide-content'>
+<p>You know about wiki.openstreetmap.org, right?</p>
+<p><a href="https://wiki.openstreetmap.org">https://wiki.openstreetmap.org</a></p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-44 -->
+<div class='slide slide-45'><h1>What is OpenStreetMap?</h1>
+<div class='slide-content'>
+<ul>
+<li>It's a website: <a href="https://openstreetmap.org">openstreetmap.org</a>.</li>
+<li>It's an accumulation of facts (a database).</li>
+</ul>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-45 -->
+<div class='slide slide-46'><h1>What is OpenStreetMap?</h1>
+<div class='slide-content'>
+<ul>
+<li>It's a website: <a href="https://openstreetmap.org">openstreetmap.org</a>.</li>
+<li>It's an accumulation of facts (a database).</li>
+<li>It's a bunch of supporting documentation and documented techniques.</li>
+</ul>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-46 -->
+<div class='slide slide-47'><h1>What is OpenStreetMap?</h1>
+<div class='slide-content'>
+<ul>
+<li>It's a website: <a href="https://openstreetmap.org">openstreetmap.org</a>.</li>
+<li>It's an accumulation of facts (a database).</li>
+<li>It's a bunch of supporting documentation and documented techniques.
+<ul>
+<li><a href="https://wiki.openstreetmap.org">wiki.openstreetmap.org</a></li>
+<li><a href="https://overpass-turbo.eu">overpass-turbo.eu</a></li>
+<li><a href="https://taginfo.openstreetmap.org/keys/highway#values">taginfo.openstreetmap.org</a></li>
+</ul>
+</li>
+</ul>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-47 -->
+<div class='slide slide-48'><h1>Overpass: ⚠️ caveats</h1>
+<div class='slide-content'>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-48 -->
+<div class='slide slide-49'><h1>Overpass: ⚠️ caveats</h1>
+<div class='slide-content'>
+<p>Quick and "easy" for small-ish one-off exports.</p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-49 -->
+<div class='slide slide-50'><h1>Overpass: ⚠️ caveats</h1>
+<div class='slide-content'>
+<p>Quick and "easy" for small-ish one-off exports.</p>
+<img style="max-width: 80%" src="images%2Foverpass-timeout.png" />
+What if I need a bigger (or faster) export?
+
+</div><!-- end slide-content -->
+</div><!-- end slide-50 -->
+<div class='slide slide-51'><h1>do. it. yourself.</h1>
+<div class='slide-content'>
+<p>Rather than asking a website to run your queries, download all the data for your area and filter tags on your own computer.</p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-51 -->
+<div class='slide slide-52'><h1>Download the data</h1>
+<div class='slide-content'>
+<p>Geofabrik "pre-slices" OSM data into commonly useful chunks.</p>
+<p><a href="https://download.geofabrik.de">https://download.geofabrik.de</a></p>
+<p>⚠️You probably want the <code>.osm.pbf</code> file format.</p>
+<p><a href="https://download.geofabrik.de/north-america/us/washington.html">Washington state</a> is about 300MB</p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-52 -->
+<div class='slide slide-53'><h1>Filter the tags</h1>
+<div class='slide-content'>
+<p>I use the <a href="https://osmcode.org/osmium-tool/"><code>osmium</code></a> command line tool for this.</p>
+<p>Extract seattle from the washington state file:</p>
+<pre><code>osmium extract washington-latest.osm.pbf \
+  --bbox=-122.459696,47.481002,-122.224433,47.734136 \
+  -o seattle.osm.pbf 
+</code></pre>
+<p>Get post offices in seattle:</p>
+<pre><code>osmium tags-filter seattle.osm.pbf \
+  n/amenity=post_office \
+  -o seattle_post_offices.osm.pbf 
+</code></pre>
+<p>Convert to geojson:</p>
+<pre><code>osmium export seattle_post_offices.osm.pbf \
+  -o seattle_post_offices.geojson \
+  -f geojson
+</code></pre>
+<p>Osmium also has somewhat complicated syntax.</p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-53 -->
+<div class='slide slide-54'><h1><span style="text-align: center">Part II</span></h1>
 <div class='slide-content'>
 <img src="images/could-should.jpeg" width=70% style="margin-left: 15%;" />
 
 </div><!-- end slide-content -->
-</div><!-- end slide-26 -->
-<div class='slide slide-27'><h1>So, <em>should</em> you use OSM data?</h1>
+</div><!-- end slide-54 -->
+<div class='slide slide-55'><h1>So, <em>should</em> you use OSM data?</h1>
 <div class='slide-content'>
 
 </div><!-- end slide-content -->
-</div><!-- end slide-27 -->
-<div class='slide slide-28'><h1>So, <em>should</em> you use OSM data?</h1>
+</div><!-- end slide-55 -->
+<div class='slide slide-56'><h1>So, <em>should</em> you use OSM data?</h1>
 <div class='slide-content'>
 <ul>
 <li>Completeness?</li>
 </ul>
 
 </div><!-- end slide-content -->
-</div><!-- end slide-28 -->
-<div class='slide slide-29'><h1>Is OSM Complete?</h1>
+</div><!-- end slide-56 -->
+<div class='slide slide-57'><h1>Is OSM Complete?</h1>
 <div class='slide-content'>
 
 </div><!-- end slide-content -->
-</div><!-- end slide-29 -->
-<div class='slide slide-30'><h1>Is OSM Complete?</h1>
+</div><!-- end slide-57 -->
+<div class='slide slide-58'><h1>Is OSM Complete?</h1>
 <div class='slide-content'>
 <p>Of course not.</p>
 
 </div><!-- end slide-content -->
-</div><!-- end slide-30 -->
-<div class='slide slide-31'><h1>Is OSM Complete?</h1>
+</div><!-- end slide-58 -->
+<div class='slide slide-59'><h1>Is OSM Complete?</h1>
 <div class='slide-content'>
 <p>Of course not. But it's pretty good for some things!</p>
 
 </div><!-- end slide-content -->
-</div><!-- end slide-31 -->
-<div class='slide slide-32'><h1>Is OSM Complete?</h1>
+</div><!-- end slide-59 -->
+<div class='slide slide-60'><h1>Is OSM Complete?</h1>
 <div class='slide-content'>
 <p>Of course not. But it's pretty good for some things!</p>
 <p>Best with things that don't frequently change:</p>
@@ -521,8 +810,8 @@ table .osm-tag {
 </ul>
 
 </div><!-- end slide-content -->
-</div><!-- end slide-32 -->
-<div class='slide slide-33'><h1>Is OSM Complete?</h1>
+</div><!-- end slide-60 -->
+<div class='slide slide-61'><h1>Is OSM Complete?</h1>
 <div class='slide-content'>
 <p>Conversely, OSM is less good at things that change often.</p>
 <ul>
@@ -537,24 +826,24 @@ table .osm-tag {
 </ul>
 
 </div><!-- end slide-content -->
-</div><!-- end slide-33 -->
-<div class='slide slide-34'><h1>So, <em>should</em> you use OSM data?</h1>
+</div><!-- end slide-61 -->
+<div class='slide slide-62'><h1>So, <em>should</em> you use OSM data?</h1>
 <div class='slide-content'>
 <ul>
 <li>Completeness?</li>
 </ul>
 
 </div><!-- end slide-content -->
-</div><!-- end slide-34 -->
-<div class='slide slide-35'><h1>So, <em>should</em> you use OSM data?</h1>
+</div><!-- end slide-62 -->
+<div class='slide slide-63'><h1>So, <em>should</em> you use OSM data?</h1>
 <div class='slide-content'>
 <ul>
 <li>Completeness: Best for things that don't change a lot.</li>
 </ul>
 
 </div><!-- end slide-content -->
-</div><!-- end slide-35 -->
-<div class='slide slide-36'><h1>So, <em>should</em> you use OSM data?</h1>
+</div><!-- end slide-63 -->
+<div class='slide slide-64'><h1>So, <em>should</em> you use OSM data?</h1>
 <div class='slide-content'>
 <ul>
 <li>Completeness: Best for things that don't change a lot.</li>
@@ -562,40 +851,42 @@ table .osm-tag {
 </ul>
 
 </div><!-- end slide-content -->
-</div><!-- end slide-36 -->
-<div class='slide slide-37'><h1>Is OSM data always correct?</h1>
+</div><!-- end slide-64 -->
+<div class='slide slide-65'><h1>Is OSM data always correct?</h1>
 <div class='slide-content'>
 
 </div><!-- end slide-content -->
-</div><!-- end slide-37 -->
-<div class='slide slide-38'><h1>Is OSM data always correct?</h1>
+</div><!-- end slide-65 -->
+<div class='slide slide-66'><h1>Is OSM data always correct?</h1>
 <div class='slide-content'>
 <p>Of course not.</p>
 
 </div><!-- end slide-content -->
-</div><!-- end slide-38 -->
-<div class='slide slide-39'><h1>Is OSM data always correct?</h1>
+</div><!-- end slide-66 -->
+<div class='slide slide-67'><h1>Is OSM data always correct?</h1>
 <div class='slide-content'>
 <p>Of course not. But it's usually pretty good!</p>
 
 </div><!-- end slide-content -->
-</div><!-- end slide-39 -->
-<div class='slide slide-40'><h1>Is OSM data always correct?</h1>
+</div><!-- end slide-67 -->
+<div class='slide slide-68'><h1>Is OSM data always correct?</h1>
 <div class='slide-content'>
-<p>Of course not. But it's usually pretty good!</p>
+<p style="margin-top: -15px">
+Of course not. But it's usually pretty good!
+</p>
 <p>It's a public website, like wikipedia, so vandalism happens.
 But it's usually cleaned up quickly.</p>
-<p><a href="https://daylightmap.org">https://daylightmap.org</a> (Meta/Microsoft and others) exists as a "curated" subset of OSM for this purpose. Unfortunately it's being discontinued.</p>
+<p><a href="https://daylightmap.org">https://daylightmap.org</a> (Meta/Microsoft and others) "curates" a subset of OSM for this purpose. But it's being discontinued. 🤷</p>
 
 </div><!-- end slide-content -->
-</div><!-- end slide-40 -->
-<div class='slide slide-41'><h1>Is OSM data reliable?</h1>
+</div><!-- end slide-68 -->
+<div class='slide slide-69'><h1>Is OSM data reliable?</h1>
 <div class='slide-content'>
 <p>Well... it depends.</p>
 
 </div><!-- end slide-content -->
-</div><!-- end slide-41 -->
-<div class='slide slide-42'><h1>Where does OSM data come from?</h1>
+</div><!-- end slide-69 -->
+<div class='slide slide-70'><h1>Where does OSM data come from?</h1>
 <div class='slide-content'>
 <p>Mostly volunteers.</p>
 <ul>
@@ -605,19 +896,71 @@ But it's usually cleaned up quickly.</p>
 </ul>
 
 </div><!-- end slide-content -->
-</div><!-- end slide-42 -->
-<div class='slide slide-43'><h1>Where does OSM data come from?</h1>
+</div><!-- end slide-70 -->
+<div class='slide slide-71'><h1>Where does OSM data come from?</h1>
 <div class='slide-content'>
 <p>More and more coporate editing for specific datasets - e.g. amazon and driveways.</p>
 
 </div><!-- end slide-content -->
-</div><!-- end slide-43 -->
-<div class='slide slide-44'><h1>TODO</h1>
+</div><!-- end slide-71 -->
+<div class='slide slide-72'><h1>So, <em>should</em> you use OSM data?</h1>
 <div class='slide-content'>
-<p>Add slide count</p>
+<ul>
+<li>Completeness: Best for things that don't change a lot.</li>
+<li>Correctness: Usually pretty good, but account for reasonable limitations.</li>
+</ul>
 
 </div><!-- end slide-content -->
-</div><!-- end slide-44 -->
+</div><!-- end slide-72 -->
+<div class='slide slide-73'><h1>So, <em>should</em> you use OSM data?</h1>
+<div class='slide-content'>
+<ul>
+<li>Completeness: Best for things that don't change a lot.</li>
+<li>Correctness: Usually pretty good, but account for reasonable limitations.</li>
+<li>Licensing?</li>
+</ul>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-73 -->
+<div class='slide slide-74'><h1>Licensing</h1>
+<div class='slide-content'>
+<p>OSM data is licensed under the Open Database License (ODbL).</p>
+<p>Generally it's OK to use OSM data in your projects, but you must attribute OSM and share your derived data under the same license.</p>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-74 -->
+<div class='slide slide-75'><h1>What is OpenStreetMap?</h1>
+<div class='slide-content'>
+<ul>
+<li>It's a website: <a href="https://openstreetmap.org">openstreetmap.org</a>.</li>
+<li>It's an accumulation of facts (a database).</li>
+<li>It's a bunch of supporting documentation and documented techniques.</li>
+</ul>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-75 -->
+<div class='slide slide-76'><h1>What is OpenStreetMap?</h1>
+<div class='slide-content'>
+<ul>
+<li>It's a website: <a href="https://openstreetmap.org">openstreetmap.org</a>.</li>
+<li>It's an accumulation of facts (a database).</li>
+<li>It's a bunch of supporting documentation and documented techniques.</li>
+<li>???</li>
+</ul>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-76 -->
+<div class='slide slide-77'><h1>What is OpenStreetMap?</h1>
+<div class='slide-content'>
+<ul>
+<li>It's a website: <a href="https://openstreetmap.org">openstreetmap.org</a>.</li>
+<li>It's an accumulation of facts (a database).</li>
+<li>It's a bunch of supporting documentation and documented techniques.</li>
+<li>It's a community of people trying to collaborate on a <strong>huge</strong> project. ❤️</li>
+</ul>
+
+</div><!-- end slide-content -->
+</div><!-- end slide-77 -->
 </div>
 <div class='nav'>
     <button id='fullscreen' title="Toggle Full Screen">⛶</button>

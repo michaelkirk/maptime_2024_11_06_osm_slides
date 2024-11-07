@@ -96,7 +96,7 @@ top right: -122.22, 47.73
 
 <div class="column">
 
-## Geometry
+## Geometry ✅
 
 Where the thing is.
 
@@ -115,7 +115,7 @@ What the thing is.
 
 <div class="column">
 
-## Geometry
+## Geometry ✅
 
 Where the thing is.
 
@@ -312,28 +312,280 @@ table .osm-tag {
 </tr>
 </table>
 
+# Tags: What the thing is
+
+<style>
+.osm-tag {
+    font-family: monospace;
+}
+</style>
+<table style="text-align:center;">
+<tr>
+  <th width="50%">Thing</th>
+  <th>Tag</th>
+</tr>
+<tr>
+<td>a highway</td>
+<td class="osm-tag highlight-bg">highway=motorway</td>
+</tr>
+<tr>
+<td>a park</td>
+<td class="osm-tag">leisure=park</td>
+</tr>
+<tr>
+<td>a building</td>
+<td class="osm-tag">building=house</td>
+</tr>
+<tr>
+<td>a water fountain</td>
+<td class="osm-tag">amenity=drinking_water</td>
+</tr>
+</table>
+
+
+<p style="text-align: center; font-weight: bold">Let's take a closer look.</p>
+
+# Tags: A closer look. 👀
+
+<p style="margin-top: -40px;" class="osm-tag">highway=motorway</p>
+
+Tags are "key value" pairs.
+
+- **key:** `highway`
+- **value**: `motorway`
+
+# Tags: A closer look. 👀
+
+<div class="column">
+
+**key:** `highway`
+
+A given `key` has potentialy many values
+
+</div>
+<div class="column">
+
+- `highway=motorway`
+- `highway=residential`
+- `highway=trunk`
+- `highway=service`
+- and more!
+
+</div>
+
+# Tags: What do they all mean?
+
+<div style="margin-top: -32px">
+
+- `highway=motorway`
+- `highway=residential`
+- `highway=trunk`
+- `highway=service`
+
+</div>
+
+taginfo: An OSM mapper's best friend.
+<https://taginfo.openstreetmap.org/keys/highway#values>
+
+# An example, right outside.
+
+[www.openstreetmap.org/way/140804207](https://www.openstreetmap.org/way/140804207#map=16/47.66617/-122.37364)
+
+<br />
+<br />
+<br />
+<br />
+
+<img src="images/osm-road-example.png" />
+
+# Tag as many as you'd like!
+
+<https://taginfo.openstreetmap.org/keys/highway#combinations>
+
+# Facts, you say?
+
+<div class="column">
+
+## Geometry ✅
+
+Where the thing is.
+
+</div>
+
+<div class="column">
+
+##  <span style="line-height: 92px">Tags</span>
+
+What the thing is.
+
+</div>
+
+
+# Facts, you say?
+
+<div class="column">
+
+## Geometry ✅
+
+Where the thing is.
+
+</div>
+
+<div class="column">
+
+##  <span style="line-height: 92px">Tags ✅</span>
+
+What the thing is.
+
+</div>
+
+# But first...
+## <span style="line-height: 92px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a pedantic diversion.</span>
+
+# But first...
+## <span style="line-height: 92px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a pedantic diversion. ✅✅✅</span>
+
+# But first...
+## <span style="line-height: 92px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a pedantic diversion. ✅✅✅</span>
+
+# 
+<h2 style="text-align: center; margin-top: -32px;">(starting over)</h2>
+<h1>Using OpenStreetMap Data</h1>
+
+Now that we've all spent some time putting data **into** OSM,
+let's get some data **out** of OSM.
 
 # Overpass t-t-t-turbo 🔥🔥🔥
 
-Overpass Turbo is a website for extracting data from OSM.
+Overpass Turbo is a website for getting specific data out of OSM.
 
 <https://overpass-turbo.eu>
 
+<img src="images/overpass-seattle-postoffices.png" max-width="100%"/>
+
+# Overpass t-t-t-turbo 🔥🔥
+
+- Run your query
+
+# Overpass t-t-t-turbo 🔥🔥
+
+- Run your query
+- Export your preferred format
+
 # Overpass: ⚠️ caveats
 
-<https://wiki.openstreetmap.org/wiki/Overpass_API>
+# Overpass: ⚠️ caveats
 
-> It can take a couple of minutes for [changes](https://wiki.openstreetmap.org/wiki/Changeset "Changeset") to the database](https://wiki.openstreetmap.org/wiki/Database "Database") to show up in the Overpass API query results.
+The query language is
+
+# Overpass: ⚠️ caveats
+
+The query language is...
+
+# Overpass: ⚠️ caveats
+
+The query language is... really something.
+
+# Overpass: ⚠️ caveats
+
+The query language is... really something.
+
+It's powerful, but not easy for me.
+
+# Overpass: ⚠️ caveats
+
+The query language is... really something.
+
+It's powerful, but not easy for me.
+
+Try chatgpt? (But verify!!)
+
+# Overpass: ⚠️ caveats
+
+> It can take a couple of minutes for [changes](https://wiki.openstreetmap.org/wiki/Changeset "Changeset") to the [database](https://wiki.openstreetmap.org/wiki/Database "Database") to show up in the Overpass API query results.
+
+from: <https://wiki.openstreetmap.org/wiki/Overpass_API>
+
+# An aside
+
+You know about wiki.openstreetmap.org, right?
+
+<https://wiki.openstreetmap.org>
+
+
+# What is OpenStreetMap?
+
+- It's a website: [openstreetmap.org](https://openstreetmap.org).
+- It's an accumulation of facts (a database).
+
+# What is OpenStreetMap?
+
+- It's a website: [openstreetmap.org](https://openstreetmap.org).
+- It's an accumulation of facts (a database).
+- It's a bunch of supporting documentation and documented techniques.
+
+# What is OpenStreetMap?
+
+- It's a website: [openstreetmap.org](https://openstreetmap.org).
+- It's an accumulation of facts (a database).
+- It's a bunch of supporting documentation and documented techniques.
+  - [wiki.openstreetmap.org](https://wiki.openstreetmap.org)
+  - [overpass-turbo.eu](https://overpass-turbo.eu)
+  - [taginfo.openstreetmap.org](https://taginfo.openstreetmap.org/keys/highway#values)
+
+# Overpass: ⚠️ caveats
 
 # Overpass: ⚠️ caveats
 
 Quick and "easy" for small-ish one-off exports.
 
+# Overpass: ⚠️ caveats
+
+Quick and "easy" for small-ish one-off exports.
+
+<img style="max-width: 80%" src="images%2Foverpass-timeout.png" />
 What if I need a bigger (or faster) export?
 
-# osmium (cli tool)
+# do. it. yourself.
 
-Rather than querying a remote API, download "all the data" and do queries locally.
+Rather than asking a website to run your queries, download all the data for your area and filter tags on your own computer.
+
+# Download the data
+
+Geofabrik "pre-slices" OSM data into commonly useful chunks.
+
+<https://download.geofabrik.de>
+
+⚠️You probably want the `.osm.pbf` file format.
+
+[Washington state](https://download.geofabrik.de/north-america/us/washington.html) is about 300MB
+
+# Filter the tags 
+
+I use the [`osmium`](https://osmcode.org/osmium-tool/) command line tool for this.
+
+Extract seattle from the washington state file:
+```
+osmium extract washington-latest.osm.pbf \
+  --bbox=-122.459696,47.481002,-122.224433,47.734136 \
+  -o seattle.osm.pbf 
+```
+
+Get post offices in seattle:
+```
+osmium tags-filter seattle.osm.pbf \
+  n/amenity=post_office \
+  -o seattle_post_offices.osm.pbf 
+```
+
+Convert to geojson:
+```
+osmium export seattle_post_offices.osm.pbf \
+  -o seattle_post_offices.geojson \
+  -f geojson
+```
+
+Osmium also has somewhat complicated syntax.
 
 # <span style="text-align: center">Part II</span>
 
@@ -403,12 +655,14 @@ Of course not. But it's usually pretty good!
 
 # Is OSM data always correct?
 
+<p style="margin-top: -15px">
 Of course not. But it's usually pretty good!
+</p>
 
 It's a public website, like wikipedia, so vandalism happens.
 But it's usually cleaned up quickly.
 
-<https://daylightmap.org> (Meta/Microsoft and others) exists as a "curated" subset of OSM for this purpose. Unfortunately it's being discontinued.
+<https://daylightmap.org> (Meta/Microsoft and others) "curates" a subset of OSM for this purpose. But it's being discontinued. 🤷
 
 # Is OSM data reliable?
 
@@ -425,6 +679,40 @@ Mostly volunteers.
 
 More and more coporate editing for specific datasets - e.g. amazon and driveways.
 
-# TODO
+# So, *should* you use OSM data?
 
-Add slide count
+- Completeness: Best for things that don't change a lot.
+- Correctness: Usually pretty good, but account for reasonable limitations.
+
+# So, *should* you use OSM data?
+
+- Completeness: Best for things that don't change a lot.
+- Correctness: Usually pretty good, but account for reasonable limitations.
+- Licensing?
+
+# Licensing
+
+OSM data is licensed under the Open Database License (ODbL).
+
+Generally it's OK to use OSM data in your projects, but you must attribute OSM and share your derived data under the same license.
+
+
+# What is OpenStreetMap?
+
+- It's a website: [openstreetmap.org](https://openstreetmap.org).
+- It's an accumulation of facts (a database).
+- It's a bunch of supporting documentation and documented techniques.
+
+# What is OpenStreetMap?
+
+- It's a website: [openstreetmap.org](https://openstreetmap.org).
+- It's an accumulation of facts (a database).
+- It's a bunch of supporting documentation and documented techniques.
+- ???
+
+# What is OpenStreetMap?
+
+- It's a website: [openstreetmap.org](https://openstreetmap.org).
+- It's an accumulation of facts (a database).
+- It's a bunch of supporting documentation and documented techniques.
+- It's a community of people trying to collaborate on a **huge** project. ❤️

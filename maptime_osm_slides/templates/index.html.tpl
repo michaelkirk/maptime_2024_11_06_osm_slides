@@ -86,6 +86,7 @@ blockquote p {
 
 .slide-content:has(.column) {
     flex-direction: row;
+    gap: 32px;
 }
 
 .nav button {
